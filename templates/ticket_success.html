@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ticket Submitted Successfully | IT Help Desk</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">IT Help Desk</div>
+
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('submit_ticket') }}">Submit a Ticket</a>
+            <a href="{{ url_for('view_tickets') }}">View Tickets</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        </div>
+
+    </nav>
+
+    <main class="container success-container">
+
+        <div class="success-message">
+
+            <h1>Ticket Submitted Successfully!</h1>
+
+            <p>
+                Thank you for contacting the IT Help Desk.
+                Your ticket has been received successfully.
+            </p>
+
+            <a href="{{ url_for('home') }}" class="home-button">
+                Return to Home
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>IT Help Desk Ticketing System | 2026</p>
+    </footer>
+
+</body>
+</html>

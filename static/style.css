@@ -1,0 +1,392 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #959fa9;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #123c69;
+    color: white;
+}
+
+.nav-links a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+/* Main content */
+.container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.welcome-section {
+    background-color: white;
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #123c69;
+    font-size: 32px;
+}
+
+.welcome-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.description {
+    color: #666666;
+    line-height: 1.6;
+}
+
+.submit-button {
+    display: inline-block;
+    background-color: #4eb9bd;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #1fafb4;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777777;
+}
+
+form[action="/submit-ticket"] {
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+form[action="/submit-ticket"] label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #123c69;
+}
+
+form[action="/submit-ticket"] input,
+form[action="/submit-ticket"] select,
+form[action="/submit-ticket"] textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+form[action="/submit-ticket"] textarea {
+    resize: vertical;
+}
+
+form[action="/submit-ticket"] input:focus,
+form[action="/submit-ticket"] select:focus,
+form[action="/submit-ticket"] textarea:focus {
+    outline: none;
+    border-color: #1769aa;
+    box-shadow: 0 0 0 2px rgba(23, 105, 170, 0.15);
+}
+
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #123c69;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card h2 {
+    color: #123c69;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    color: #333333;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.search-form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    max-width: none;
+    margin: 25px 0;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.search-form a,
+.filter-form a {
+    color: #123c69;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-form a:hover,
+.filter-form a:hover {
+    text-decoration: underline;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    max-width: none;
+    margin: 20px 0 30px;
+}
+
+.filter-form label {
+    color: #123c69;
+    font-weight: bold;
+}
+
+.filter-form select {
+    padding: 11px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+}
+
+/* General button styling */
+button {
+    background-color: #123c69;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0d2d50;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #4eb9bd;
+    outline-offset: 3px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #123c69;
+    color: white;
+    padding: 16px;
+    text-align: left;
+    font-size: 14px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background-color: #f0f5fa;
+    transition: 0.2s;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td form {
+    max-width: none;
+    margin: 0 0 8px;
+    text-align: left;
+}
+
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.success-message {
+    background-color: white;
+    padding: 45px 35px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.success-message h1 {
+    color: #123c69;
+    margin-bottom: 20px;
+}
+
+.success-message p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.home-button {
+    display: inline-block;
+    background-color: #123c69;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.home-button:hover {
+    background-color: #4eb9bd;
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .container {
+        margin: 25px auto;
+        padding: 12px;
+    }
+
+    .welcome-section {
+        padding: 30px 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .welcome-text {
+        font-size: 17px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .success-message {
+        padding: 30px 20px;
+    }
+}

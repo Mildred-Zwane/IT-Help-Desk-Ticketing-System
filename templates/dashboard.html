@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | IT Help Desk</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">IT Help Desk</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/submit-ticket">Submit a Ticket</a>
+            <a href="/view-tickets">View Tickets</a>
+        </div>
+
+    </nav>
+
+    <main class="container">
+
+        <section class="welcome-section">
+
+            <h1>Help Desk Dashboard</h1>
+
+            <p class="description">
+                Overview of all IT support tickets.
+            </p>
+
+            <div class="dashboard-grid">
+
+                <div class="stat-card">
+                    <h2>Total Tickets</h2>
+                    <p>{{ total_tickets }}</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2>Open Tickets</h2>
+                    <p>{{ open_tickets }}</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2>In Progress</h2>
+                    <p>{{ in_progress_tickets }}</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2>Resolved Tickets</h2>
+                    <p>{{ resolved_tickets }}</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>IT Help Desk Ticketing System | 2026</p>
+    </footer>
+
+</body>
+</html>

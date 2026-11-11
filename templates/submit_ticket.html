@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submit a Ticket | IT Help Desk</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+   
+    <nav class="navbar">
+        <div class="logo">IT Help Desk</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+        </div>
+    </nav>
+
+   
+    <main class="container">
+
+        <section class="welcome-section">
+
+            <h1>Submit a Support Ticket</h1>
+
+            <p class="description">
+                Please complete the form below to report your technical problem.
+            </p>
+
+            <form action="/submit-ticket" method="POST">
+
+                <label for="full_name">Full Name</label>
+                <input
+                    type="text"
+                    id="full_name"
+                    name="full_name"
+                    placeholder="Enter your full name"
+                    minlength="3"
+                    maxlength="50"
+                    required
+                >
+
+        
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    maxlength="100"
+                    required
+                >
+
+                <label for="title">Problem Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Briefly describe your problem"
+                    minlength="5"
+                    max="100"
+                    required
+                >
+
+                <label for="category">Problem Category</label>
+
+                <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                    <option value="Network">Network</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="description">Problem Description</label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="5"
+                    placeholder="Explain the problem you are experiencing..."
+                    minlength="10"
+                    maxlength="500"
+                    required
+                ></textarea>
+
+
+                <button type="submit" class="submit-button">
+                    Submit Ticket
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>IT Help Desk Ticketing System | 2026</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

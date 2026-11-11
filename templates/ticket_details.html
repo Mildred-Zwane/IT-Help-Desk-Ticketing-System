@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ticket Details | IT Help Desk</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">IT Help Desk</div>
+
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('submit_ticket') }}">Submit a Ticket</a>
+            <a href="{{ url_for('view_tickets') }}">View Tickets</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        </div>
+
+    </nav>
+
+    <main class="container">
+
+        <section class="welcome-section">
+
+            <h1>Ticket Details</h1>
+
+            <p><strong>Ticket ID:</strong> {{ ticket["id"] }}</p>
+
+            <p><strong>Employee Name:</strong> {{ ticket["full_name"] }}</p>
+
+            <p><strong>Email Address:</strong> {{ ticket["email"] }}</p>
+
+            <p><strong>Problem Title:</strong> {{ ticket["title"] }}</p>
+
+            <p><strong>Category:</strong> {{ ticket["category"] }}</p>
+
+            <p><strong>Description:</strong> {{ ticket["description"] }}</p>
+
+            <p><strong>Status:</strong> {{ ticket["status"] }}</p>
+
+            <p><strong>Date Submitted:</strong> {{ ticket["created_at"] }}</p>
+
+            <a href="{{ url_for('view_tickets') }}" class="submit-button">
+                Back to View Tickets
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>IT Help Desk Ticketing System | 2026</p>
+    </footer>
+
+</body>
+</html>

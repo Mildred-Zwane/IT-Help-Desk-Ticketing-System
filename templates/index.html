@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Help Desk Ticketing System</title>
+
+    
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+ 
+    <nav class="navbar">
+        <div class="logo">
+            IT Help Desk
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/submit-ticket">Submit a Ticket</a>
+            <a href="/view-tickets">View Tickets</a>
+        </div>
+    </nav>
+
+ 
+    <main class="container">
+
+        <section class="welcome-section">
+
+            <h1>IT Help Desk Ticketing System</h1>
+
+            <p class="welcome-text">
+                Welcome to our IT Support Portal!
+            </p>
+
+            <p class="description">
+                Report your technical problems and track your support requests.
+                Our support team is here to help you.
+            </p>
+
+           <a href="/submit-ticket" class="submit-button">
+                 Submit a Ticket
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>IT Help Desk Ticketing System | 2026</p>
+    </footer>
+
+</body>
+
+</html>
